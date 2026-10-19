@@ -34,6 +34,8 @@ self.C3_JsPropNameTable = [
 	{toque: 0},
 	{TxtInfo: 0},
 	{TxtResultado: 0},
+	{Fondo: 0},
+	{Sombra: 0},
 	{Columna: 0},
 	{Fila: 0},
 	{anchoColumna: 0},
@@ -57,5 +59,7 @@ self.InstanceType = {
 	Brote: class extends self.ISpriteInstance {},
 	toque: class extends self.IInstance {},
 	TxtInfo: class extends self.ITextInstance {},
-	TxtResultado: class extends self.ITextInstance {}
+	TxtResultado: class extends self.ITextInstance {},
+	Fondo: class extends self.ISpriteInstance {},
+	Sombra: class extends self.ISpriteInstance {}
 }
