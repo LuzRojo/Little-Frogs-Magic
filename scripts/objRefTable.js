@@ -67,6 +67,8 @@ self.C3_JsPropNameTable = [
 	{BtnInicio: 0},
 	{BtnOpciones: 0},
 	{TxtAyuda: 0},
+	{Pergamino1: 0},
+	{Sprite: 0},
 	{Columna: 0},
 	{Fila: 0},
 	{anchoColumna: 0},
@@ -106,5 +108,7 @@ self.InstanceType = {
 	FondoMenu: class extends self.ISpriteInstance {},
 	BtnInicio: class extends self.ISpriteInstance {},
 	BtnOpciones: class extends self.ISpriteInstance {},
-	TxtAyuda: class extends self.ITextInstance {}
+	TxtAyuda: class extends self.ITextInstance {},
+	Pergamino1: class extends self.ISpriteInstance {},
+	Sprite: class extends self.ISpriteInstance {}
 }
