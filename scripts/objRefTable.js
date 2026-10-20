@@ -36,8 +36,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Exps.max,
-		C3.Plugins.System.Acts.GoToLayout,
-		C3.Plugins.Text.Acts.SetVisible
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -65,7 +64,6 @@ self.C3_JsPropNameTable = [
 	{Amenaza: 0},
 	{FondoMenu: 0},
 	{BtnInicio: 0},
-	{BtnOpciones: 0},
 	{TxtAyuda: 0},
 	{Pergamino1: 0},
 	{Sprite: 0},
@@ -107,7 +105,6 @@ self.InstanceType = {
 	Amenaza: class extends self.ISpriteInstance {},
 	FondoMenu: class extends self.ISpriteInstance {},
 	BtnInicio: class extends self.ISpriteInstance {},
-	BtnOpciones: class extends self.ISpriteInstance {},
 	TxtAyuda: class extends self.ITextInstance {},
 	Pergamino1: class extends self.ISpriteInstance {},
 	Sprite: class extends self.ISpriteInstance {}
