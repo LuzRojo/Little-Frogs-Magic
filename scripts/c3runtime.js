@@ -1387,13 +1387,53 @@ self.C3_ExpressionFuncs = [
 			return () => (421 + (78 * (v0.GetValue() + 0.5)));
 		},
 		() => 638,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("21,1,12,22,11,21,1,22,11", "11,22,1,21,12,1,22,11,21", "22,11,21,1,22,12,11,21,1", "1,21,22,11,1,21,11,22,12");
+		},
+		() => "z",
 		() => 0,
+		() => 9,
+		() => "",
+		() => 70,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			const f3 = p._GetNode(3).GetBoundMethod();
+			const f4 = p._GetNode(4).GetBoundMethod();
+			return () => ((2 * Math.floor((f0(f1(v2.GetValue(), f3(), ",")) / 10))) + Math.floor(f4(0, 2)));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() + 1);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			const f3 = p._GetNode(3).GetBoundMethod();
+			return () => (f0(f1(v2.GetValue(), f3(), ",")) % 10);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (421 + (78 * (n0.ExpInstVar() + 0.5)));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (638 - (50 * n0.ExpInstVar()));
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpInstVar() - 1);
+		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
 			return () => f0((v1.GetValue() + 1), 10);
 		},
 		() => 1,
+		() => 5,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
@@ -1416,8 +1456,15 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			const v1 = p._GetNode(1).GetVar();
+			return () => f0(v1.GetValue(), 2);
+		},
+		() => 80,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
 			const v2 = p._GetNode(2).GetVar();
-			return () => and((("zona actual: " + f0("Común,Raro,Ultra raro", Math.floor((v1.GetValue() / 2)), ",")) + "  ·  pasos: "), v2.GetValue());
+			const v3 = p._GetNode(3).GetVar();
+			return () => and((and((("zona actual: " + f0("Común,Raro,Ultra raro", Math.floor((v1.GetValue() / 2)), ",")) + "  ·  pasos: "), v2.GetValue()) + "  ·  daño: "), v3.GetValue());
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1447,11 +1494,20 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => (f0() - v1.GetValue());
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const n1 = p._GetNode(1);
+			return () => (v0.GetValue() + n1.ExpInstVar());
+		},
+		() => 2,
+		() => "Planta perdida",
 		() => 10,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			const v1 = p._GetNode(1).GetVar();
-			return () => ("Resultado: " + f0("Común,Raro,Ultra raro", Math.floor((v1.GetValue() / 2)), ","));
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			const v3 = p._GetNode(3).GetVar();
+			return () => ("Resultado: " + f0("Común,Raro,Ultra raro", f1(0, (Math.floor((v2.GetValue() / 2)) - v3.GetValue())), ","));
 		},
 		() => "La planta no alcanzo a crecer"
 ];

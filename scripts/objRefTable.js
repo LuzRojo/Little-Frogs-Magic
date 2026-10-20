@@ -6,9 +6,21 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Text,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Exps.choose,
+		C3.Plugins.System.Cnds.For,
+		C3.Plugins.System.Cnds.Repeat,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.Sprite.Acts.SetSize,
+		C3.Plugins.Sprite.Acts.SetInstanceVar,
+		C3.Plugins.System.Exps.int,
+		C3.Plugins.System.Exps.tokenat,
+		C3.Plugins.System.Exps.loopindex,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.System.Cnds.CompareVar,
-		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Exps.min,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.System.Cnds.EveryTick,
@@ -18,11 +30,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetY,
 		C3.Plugins.Sprite.Exps.Y,
 		C3.Plugins.Text.Acts.SetText,
-		C3.Plugins.System.Exps.tokenat,
 		C3.Plugins.Touch.Exps.X,
 		C3.Plugins.Touch.Exps.Y,
 		C3.Plugins.Touch.Cnds.OnNthTouchEnd,
-		C3.Plugins.System.Cnds.Compare
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
+		C3.Plugins.System.Exps.max,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Text.Acts.SetVisible
 	];
 };
 self.C3_JsPropNameTable = [
@@ -36,6 +51,22 @@ self.C3_JsPropNameTable = [
 	{TxtResultado: 0},
 	{Fondo: 0},
 	{Sombra: 0},
+	{Campo: 0},
+	{Texto: 0},
+	{NieblaB: 0},
+	{NieblaG: 0},
+	{Texto2: 0},
+	{Texto3: 0},
+	{Recuadro: 0},
+	{Tipo: 0},
+	{Estado: 0},
+	{colA: 0},
+	{filA: 0},
+	{Amenaza: 0},
+	{FondoMenu: 0},
+	{BtnInicio: 0},
+	{BtnOpciones: 0},
+	{TxtAyuda: 0},
 	{Columna: 0},
 	{Fila: 0},
 	{anchoColumna: 0},
@@ -48,7 +79,9 @@ self.C3_JsPropNameTable = [
 	{EstadoJuego: 0},
 	{Arrastrando: 0},
 	{InicioX: 0},
-	{InicioY: 0}
+	{InicioY: 0},
+	{Dano: 0},
+	{OrdenAmenazas: 0}
 ];
 
 self.InstanceType = {
@@ -61,5 +94,17 @@ self.InstanceType = {
 	TxtInfo: class extends self.ITextInstance {},
 	TxtResultado: class extends self.ITextInstance {},
 	Fondo: class extends self.ISpriteInstance {},
-	Sombra: class extends self.ISpriteInstance {}
+	Sombra: class extends self.ISpriteInstance {},
+	Campo: class extends self.ISpriteInstance {},
+	Texto: class extends self.ITextInstance {},
+	NieblaB: class extends self.ISpriteInstance {},
+	NieblaG: class extends self.ISpriteInstance {},
+	Texto2: class extends self.ITextInstance {},
+	Texto3: class extends self.ITextInstance {},
+	Recuadro: class extends self.ISpriteInstance {},
+	Amenaza: class extends self.ISpriteInstance {},
+	FondoMenu: class extends self.ISpriteInstance {},
+	BtnInicio: class extends self.ISpriteInstance {},
+	BtnOpciones: class extends self.ISpriteInstance {},
+	TxtAyuda: class extends self.ITextInstance {}
 }
