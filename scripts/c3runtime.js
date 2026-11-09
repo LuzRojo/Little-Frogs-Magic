@@ -1383,16 +1383,17 @@ function or(l, r)
 
 self.C3_ExpressionFuncs = [
 		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => f0("21,1,12,22,11,21,1,22,11", "11,22,1,21,12,1,22,11,21", "22,11,21,1,22,12,11,21,1", "1,21,22,11,1,21,11,22,12");
+		},
+		() => 0,
+		() => 18,
+		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => (421 + (78 * (v0.GetValue() + 0.5)));
 		},
 		() => 638,
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0("21,1,12,22,11,21,1,22,11", "11,22,1,21,12,1,22,11,21", "22,11,21,1,22,12,11,21,1", "1,21,22,11,1,21,11,22,12");
-		},
 		() => "z",
-		() => 0,
 		() => 9,
 		() => "",
 		() => 70,
@@ -1500,7 +1501,6 @@ self.C3_ExpressionFuncs = [
 			return () => (v0.GetValue() + n1.ExpInstVar());
 		},
 		() => 2,
-		() => "Planta perdida",
 		() => 10,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
@@ -1509,7 +1509,67 @@ self.C3_ExpressionFuncs = [
 			const v3 = p._GetNode(3).GetVar();
 			return () => ("Resultado: " + f0("Común,Raro,Ultra raro", f1(0, (Math.floor((v2.GetValue() / 2)) - v3.GetValue())), ","));
 		},
-		() => "La planta no alcanzo a crecer"
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(0, (Math.floor((v1.GetValue() / 2)) - v2.GetValue()));
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => (and(v0.GetValue(), v1.GetValue()) + ",");
+		},
+		() => "La planta no alcanzo a crecer",
+		() => "Ajustes",
+		() => -1,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(v1.GetValue(), v2.GetValue(), "|");
+		},
+		() => 3,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
+		() => "Mantené presionada la planta y arrastrala al mortero",
+		p => {
+			const n0 = p._GetNode(0);
+			const v1 = p._GetNode(1).GetVar();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			const f3 = p._GetNode(3).GetBoundMethod();
+			return () => C3.lerp(n0.ExpObject(), v1.GetValue(), f2(1, (12 * f3())));
+		},
+		() => "Tocá el mortero 3 veces para moler",
+		() => "Arrastrá al caldero",
+		() => 0.8,
+		() => "Tocá la maceta para cultivar el siguiente ingrediente",
+		() => 4,
+		() => "Tocá los polvos Magicos",
+		() => "Tocá el caldero 3 veces para mezclar",
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			const v1 = p._GetNode(1).GetVar();
+			return () => (((v0.GetValue()) >= (3) ? 1 : 0) + ((v1.GetValue()) >= (5) ? 1 : 0));
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const f1 = p._GetNode(1).GetBoundMethod();
+			const v2 = p._GetNode(2).GetVar();
+			return () => f0(f1("10,25,50", v2.GetValue(), ","));
+		},
+		() => 7,
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (1 - v0.GetValue());
+		},
+		() => "Sendero",
+		() => "Preparacion",
+		() => 99,
+		() => "menu",
+		() => "ComoJugar"
 ];
 
 
